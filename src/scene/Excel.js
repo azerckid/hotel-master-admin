@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import * as XLSX from "xlsx";
-import iconv from "iconv-lite";
+import iconv from "iconv-lite"; // 한글 인코딩 문제 해결 npm install buffer iconv-lite --save
 
 import lunetDateTransform from "../utils/lunetDateTransform";
 import lunetAccountTransform from "../utils/lunetAccountTransform";
@@ -147,20 +147,6 @@ const Excel = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (excelFile !== null) {
-    //   const workbook = XLSX.read(excelFile, {
-    //     type: "buffer",
-    //   });
-    //   const workSheetName = workbook.SheetNames[0];
-    //   const workSheet = workbook.Sheets[workSheetName];
-    //   const data = XLSX.utils.sheet_to_json(workSheet);
-    //   setExcelData(data);
-    //   console.log("data", data);
-    // } else {
-    //   setExcelData(null);
-    //   console.log("Please select Excel file");
-    //   alert("Please select Excel file");
-    // }
   };
 
   return (
