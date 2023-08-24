@@ -60,6 +60,10 @@ function lunetAccount({ lunetAccount, setLunetAccount, year, month, hotel }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(lunetAccount),
+      }).then((res) => {
+        if (res.status === 200) {
+          window.alert("업로드 되었습니다.");
+        }
       });
     }
   };

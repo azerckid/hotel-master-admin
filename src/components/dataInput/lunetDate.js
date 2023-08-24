@@ -61,6 +61,10 @@ function lunetDate({ lunetDate, setLunetDate, year, month, hotel }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(lunetDate),
+      }).then((res) => {
+        if (res.status === 200) {
+          window.alert("업로드 되었습니다.");
+        }
       });
     } else {
       window.alert("루넷 날짜 자료를 업로드해주세요.");
