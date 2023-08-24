@@ -1,4 +1,5 @@
-const sanhaDateTransform = (data) => {
+const sanhaDateTransform = (data, year, month, hotel) => {
+  console.log(year, month);
   const headers = data[0];
   //   console.log(headers);
   return data.slice(1).map((row) => {
@@ -14,7 +15,13 @@ const sanhaDateTransform = (data) => {
       let newKey = headers[key].replace(/[\s.%]/g, "");
       transformedRow[newKey] = row[key];
     }
-    return transformedRow;
+    let transformedData = {
+      Year: year,
+      Month: month,
+      Hotel: hotel,
+      ...transformedRow,
+    };
+    return transformedData;
   });
 };
 

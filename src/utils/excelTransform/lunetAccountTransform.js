@@ -1,6 +1,9 @@
-const lunetAccountTransform = (data) => {
+const lunetAccountTransform = (data, year, month, hotel) => {
   const transformed = data.slice(2).map((entry) => {
     return {
+      Year: year,
+      Month: month,
+      Hotel: hotel,
       Account: entry.A,
       AccountName: entry.B,
       TotalRevenue: entry.C,

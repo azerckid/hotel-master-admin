@@ -1,6 +1,9 @@
-const lunetDateTransform = (lunet) => {
+const lunetDateTransform = (lunet, year, month, hotel) => {
   const transformed = lunet.slice(2).map((item) => {
     return {
+      Year: year,
+      Month: month,
+      Hotel: hotel,
       Date: item[0],
       Day: item[1],
       FIT: {
