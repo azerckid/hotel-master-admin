@@ -51,7 +51,7 @@ function SignUp() {
       const response = await axios
         .post(process.env.REACT_APP_API_URL + "/user/signup", signUpData)
         .then((res) => {
-          if (res.data.message === "User created") {
+          if (res.data.message === "Register Success") {
             alert("회원가입 성공");
             history("/login");
           }

@@ -16,23 +16,16 @@ const HomeContainer = styled.div`
   }
 `;
 
-function Home() {
+function Err404() {
   const location = useLocation();
   const id = location.state?.id;
-  const email = location.state?.email;
 
   console.log(id);
   return (
     <HomeContainer>
-      {id && email ? (
-        <div>
-          hi ~ {id} you are logined as {email}
-        </div>
-      ) : (
-        <div>hi you are not logined</div>
-      )}
+      <div>404</div>
     </HomeContainer>
   );
 }
 
-export default Home;
+export default Err404;

@@ -53,12 +53,13 @@ function Login() {
         .post(process.env.REACT_APP_API_URL + "/user/login", loginData)
         .then((res) => {
           if (res.data.message === "Login Success") {
-            history("/", { state: { id: ID } });
+            history("/", { state: { id: ID, email: Email } });
           } else {
             alert("로그인 실패");
           }
-          console.log(response);
+          console.log(res.data.message);
         });
+      console.log(response);
     } catch (error) {
       console.log(error);
     }

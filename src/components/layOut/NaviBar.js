@@ -11,14 +11,18 @@ const NaviContainer = styled.div`
   align-items: flex-start;
   background-color: dodgerblue;
   color: #fff;
+  div:first-child {
+    margin-top: 100px;
+  }
 `;
 
 const NaviLink = styled(Link)`
-  width: 300px;
-  height: 50px;
-  margin: 10px 0px;
+  width: 240px;
+  height: 30px;
+  margin: 6px 0px;
+  margin-left: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   color: whitesmoke;
   text-decoration: none;
@@ -28,9 +32,11 @@ const NaviLink = styled(Link)`
 export const NaviBar = () => {
   return (
     <NaviContainer>
-      <NaviLink to={"/"}>Home</NaviLink>
-      <NaviLink to={"/excel"}>Data Upload</NaviLink>
-      <NaviLink to={"/login"}>Login</NaviLink>
+      <div>
+        <NaviLink to={"/"}>Home</NaviLink>
+        <NaviLink to={"/excel"}>Data Upload</NaviLink>
+        <NaviLink to={"/login"}>Login</NaviLink>
+      </div>
     </NaviContainer>
   );
 };

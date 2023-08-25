@@ -7,6 +7,7 @@ import Login from "./scene/Login";
 import SingUp from "./scene/SignUp";
 import Excel from "./scene/Excel";
 import Home from "./scene/Home";
+import Err404 from "./scene/Err404";
 
 const Frame = styled.div`
   width: 100vw;
@@ -27,6 +28,7 @@ const Router = () => {
           <Route path="/excel" element={<Excel />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SingUp />} />
+          <Route path="*" element={<Err404 />} />
         </Routes>
       </Frame>
     </BrowserRouter>
