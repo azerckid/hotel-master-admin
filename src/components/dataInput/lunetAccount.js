@@ -3,6 +3,7 @@ import * as XLSX from "xlsx";
 import styled from "styled-components";
 
 import lunetAccountTransform from "../../utils/excelTransform/lunetAccountTransform";
+import fileTypes from "../../utils/fileTypes";
 
 const ChooseFileBox = styled.div`
   width: 600px;
@@ -18,10 +19,10 @@ const Title = styled.div`
 `;
 
 function lunetAccount({ lunetAccount, setLunetAccount, year, month, hotel }) {
-  const fileTypes = [
-    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    "application/vnd.ms-excel",
-  ];
+  // const fileTypes = [
+  //   "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  //   "application/vnd.ms-excel",
+  // ];
   const handleFileLunetAccount = (e) => {
     const file = e.target.files[0];
     if (!file) {

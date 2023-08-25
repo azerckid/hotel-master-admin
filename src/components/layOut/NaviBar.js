@@ -3,17 +3,23 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NaviContainer = styled.div`
-  width: 100vw;
-  height: 50px;
+  width: 300px;
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: dodgerblue;
   color: #fff;
 `;
 
 const NaviLink = styled(Link)`
-  margin: 0 20px;
+  width: 300px;
+  height: 50px;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: whitesmoke;
   text-decoration: none;
   cursor: pointer;
@@ -22,7 +28,8 @@ const NaviLink = styled(Link)`
 export const NaviBar = () => {
   return (
     <NaviContainer>
-      <NaviLink to={"/"}>Excel</NaviLink>
+      <NaviLink to={"/"}>Home</NaviLink>
+      <NaviLink to={"/excel"}>Data Upload</NaviLink>
       <NaviLink to={"/login"}>Login</NaviLink>
     </NaviContainer>
   );

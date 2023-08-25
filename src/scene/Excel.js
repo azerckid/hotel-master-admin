@@ -17,10 +17,10 @@ const ProductContainer = styled.div`
   font-size: 8px;
 `;
 const DateContainer = styled.div`
-  margin: 50px;
+  /* margin: 50px; */
 `;
 const FormContainer = styled.div`
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   flex-direction: column;
   justify-content: center;
